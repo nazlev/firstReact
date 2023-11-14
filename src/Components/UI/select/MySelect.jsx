@@ -1,5 +1,5 @@
 import styles from "./MySelect.module.css";
-import {React} from 'react';
+import React from 'react';
 
 const MySelect = ({options, defaultValue, value, onChange}) => {
   return (

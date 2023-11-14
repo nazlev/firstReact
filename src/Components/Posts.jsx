@@ -1,5 +1,5 @@
 import "../styles/App.css";
-import {React} from 'react';
+import React from 'react';
 import MyButton from "./UI/button/MyButton";
 
 const Posts = (props) => {
