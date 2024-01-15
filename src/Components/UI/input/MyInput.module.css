@@ -1,6 +1,8 @@
 .myInput {
     width: 50%;
     border: 1px solid DodgerBlue;
-    padding: 5px 15px;
-    margin-top: 15px;
+    padding: 7px 15px;
+    margin: 15px 0;
+    color: dodgerblue;
+    outline: none;
 }

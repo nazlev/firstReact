@@ -1,9 +1,8 @@
 .myBtn {
-    padding: 5px 25px;
+    padding: 7px 25px;
     color: DodgerBlue;
     background: transparent;
     border: 1px solid DodgerBlue;
     font-size: 15px;
     cursor: pointer;
-    margin-top: 15px;
 }
