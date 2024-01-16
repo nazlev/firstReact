@@ -48,7 +48,7 @@ function Posts() {
 
   return (
     <div className="App">
-      <MyButton style={{marginTop: 30}} onClick={() => setModal(true)}>
+      <MyButton style={{marginTop: 30}} onClick={() => setModal(true)} isActive={true}>
         Create user
       </MyButton>
       <MyModal visible={modal} setVisible={setModal} > 

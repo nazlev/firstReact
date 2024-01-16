@@ -13,7 +13,7 @@ const NavBar = () => {
   }
   return (
     <div className='navbar'>
-        <MyButton className="navbar__exit" onClick={logout}>Exit</MyButton>
+        <MyButton className="navbar__exit" onClick={logout} isActive={true}>Exit</MyButton>
         <div className='navbar__links'>
             <Link className='navbar__link' to='/posts'> Posts </Link>
             <Link className='navbar__link' to='/about'> About </Link>

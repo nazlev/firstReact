@@ -6,6 +6,7 @@ import MyInput from "./UI/input/MyInput";
 const PostForm = ({create}) => {
 
   const [post, setPost] = useState({title: '', body: ''});
+  const [isEmpty, setIsEmpty] = useState(true);
 
   const addNewPost = (e) => {
     e.preventDefault()
@@ -14,22 +15,36 @@ const PostForm = ({create}) => {
     }
     create(newPost)
     setPost({title: '', body: ''})
+    setIsEmpty(true)
   }
+
+  const onChangeInputInfo = (event) => {
+    setPost({...post, title: event.target.value})
+    setIsEmpty(event.target.value.trim().length === 0)
+  }
+  const onChangeInputDesc = (event) => {
+    setPost({...post, body: event.target.value})
+    setIsEmpty(event.target.value.trim().length === 0)
+  }
+
   return (
     <form>
         <MyInput 
           value={post.title}
-          onChange={e => setPost({...post, title: e.target.value})}
+          onChange={onChangeInputInfo}
           type="text" 
           placeholder="Post info"
         />
         <MyInput 
           value={post.body}
-          onChange={e => setPost({...post, body: e.target.value})}
+          onChange={onChangeInputDesc}
           type="text" 
           placeholder="Post description"
         />
-        <MyButton onClick={addNewPost}>Create post</MyButton>
+        <MyButton 
+        disabled={isEmpty} 
+        isActive={!isEmpty}
+        onClick={addNewPost}>Create post</MyButton>
       </form>
   )
 }

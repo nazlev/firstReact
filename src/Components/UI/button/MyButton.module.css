@@ -1,4 +1,13 @@
-.myBtn {
+.myBtnDis {
+    padding: 7px 25px;
+    color: #ccc;
+    background: transparent;
+    border: 1px solid DodgerBlue;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.myBtnActive {
     padding: 7px 25px;
     color: DodgerBlue;
     background: transparent;
