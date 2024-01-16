@@ -12,10 +12,10 @@ const PostItem = (props) => {
                 <p>{props.post.body}</p>
             </div>
             <div className="post__btns">
-                <MyButton style={{marginBottom: "10px"}} onClick={() => router(`/posts/${props.post.id}`)}>
+                <MyButton style={{marginBottom: "10px"}} onClick={() => router(`/posts/${props.post.id}`)} isActive={true}>
                     Open
                 </MyButton>
-                <MyButton onClick={() => props.remove(props.post)}>
+                <MyButton onClick={() => props.remove(props.post)} isActive={true}>
                     Delete
                 </MyButton>
             </div>
